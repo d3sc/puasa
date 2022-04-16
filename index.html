@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>imsak</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="lebaran">
+        <div class="text">
+          <p>Waktu Menjelang Lebaran</p>
+        </div>
+        <div class="time">
+          <!-- <span id="hours">00</span>
+              <span>:</span>
+              <span id="minutes">00</span>
+              <span>:</span>
+              <span id="seconds">00</span>
+               AM -->
+          <!-- <span id="session">AM</span> -->
+          <h1 id="teks">Loading...</h1>
+        </div>
+      </div>
+
+      <div class="imsak">
+        <div class="text2">
+          <p>Waktu Menjelang imsak</p>
+        </div>
+        <div class="time2">
+          <!-- <span id="hours">00</span>
+              <span>:</span>
+              <span id="minutes">00</span>
+              <span>:</span>
+              <span id="seconds">00</span>
+               AM -->
+          <!-- <span id="session">AM</span> -->
+          <h1 id="teks2">Loading...</h1>
+        </div>
+      </div>
+
+      <div class="buka">
+        <div class="text3">
+          <p>Waktu Menjelang imsak</p>
+        </div>
+        <div class="time3">
+          <!-- <span id="hours">00</span>
+              <span>:</span>
+              <span id="minutes">00</span>
+              <span>:</span>
+              <span id="seconds">00</span>
+               AM -->
+          <!-- <span id="session">AM</span> -->
+          <h1 id="teks3">Loading...</h1>
+        </div>
+      </div>
+      <!-- <p>halos</p> -->
+    </div>
+  </body>
+  <script>
+    // Bagian 2
+
+    // Lebaran
+    function lebaran() {
+      const tanggalTujuan = new Date("may 2, 2022 00:00:00").getTime();
+
+      const hitungMundur = setInterval(function () {
+        const sekarang = new Date().getTime();
+        const selisih = tanggalTujuan - sekarang;
+
+        const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
+        const jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+        const detik = Math.floor((selisih % (1000 * 60)) / 1000);
+
+        const h1 = document.getElementById("teks");
+
+        h1.innerHTML = `${hari} hari ${jam} jam ${menit} menit ${detik} detik`;
+        if (selisih < 0) {
+          clearInterval(hitungMundur);
+          h1.innerHTML = "Waktu lebaran!";
+        }
+      }, 1000);
+    }
+
+    // Imsak
+    function imsak() {
+      const tanggalTujuanImsak = new Date("may 2, 2022 4:28:00").getTime();
+
+      const hitungMundurImsak = setInterval(function () {
+        const sekarang = new Date().getTime();
+        const selisih = tanggalTujuanImsak - sekarang;
+
+        const jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+        const detik = Math.floor((selisih % (1000 * 60)) / 1000);
+
+        const h1 = document.getElementById("teks2");
+
+        h1.innerHTML = `${jam} jam ${menit} menit ${detik} detik`;
+        if (selisih < 0) {
+          clearInterval(hitungMundurImsak);
+          h1.innerHTML = "Waktu Lebaran!";
+        }
+      }, 1000);
+    }
+
+    // Buka
+    function buka() {
+      const tanggalTujuanImsak = new Date("may 2, 2022 17:53:00").getTime();
+
+      const hitungMundurImsak = setInterval(function () {
+        const sekarang = new Date().getTime();
+        const selisih = tanggalTujuanImsak - sekarang;
+
+        const jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+        const detik = Math.floor((selisih % (1000 * 60)) / 1000);
+
+        const h1 = document.getElementById("teks3");
+
+        h1.innerHTML = `${jam} jam ${menit} menit ${detik} detik`;
+        if (selisih < 0) {
+          clearInterval(hitungMundurImsak);
+          h1.innerHTML = "waktu Berbuka";
+        }
+      }, 1000);
+    }
+
+    lebaran();
+    imsak();
+    buka();
+  </script>
+</html>

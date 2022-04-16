@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  /* height: 100vh; */
+  background-color: #242526;
+}
+
+.container {
+  width: 100%;
+  /* background-color: white; */
+}
+
+/* Lebaran */
+
+.lebaran {
+  margin: 50px auto;
+  font-size: 1.5em;
+  background-color: #333;
+  width: 50%;
+  height: 100%;
+  padding: 100px;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translateY(50%); */
+}
+
+.container .lebaran .text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container .lebaran .time {
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .container .lebaran #session {
+  margin-left: 10px;
+} */
+
+/* Imsak */
+.container .imsak {
+  font-size: 1.5em;
+  margin: 50px auto;
+  width: 50%;
+  height: 100%;
+  padding: 100px;
+  background-color: #333;
+}
+
+.container .text2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container .time2 {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Buka */
+.container .buka {
+  font-size: 1.5em;
+  margin: 50px auto;
+  width: 50%;
+  height: 100%;
+  padding: 100px;
+  background-color: #333;
+}
+
+.container .text3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container .time3 {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
