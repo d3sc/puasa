@@ -19,7 +19,7 @@ body {
 .container h1 {
   text-align: center;
   margin-top: 30px;
-  font-weight: 500;
+  font-weight: 400;
 }
 /* Lebaran */
 
@@ -28,7 +28,8 @@ body {
   font-size: 1.5em;
   background-color: #333;
   width: 80%;
-  padding: 100px;
+  padding: 50px;
+  text-align: center;
   /* position: absolute; */
   /* top: 50%; */
   /* left: 50%; */
@@ -58,8 +59,9 @@ body {
   font-size: 1.5em;
   margin: 50px auto;
   width: 80%;
-  padding: 100px;
+  padding: 50px;
   background-color: #333;
+  text-align: center;
 }
 
 .container .text2 {
@@ -80,7 +82,7 @@ body {
   font-size: 1.5em;
   margin: 50px auto;
   width: 80%;
-  padding: 100px;
+  padding: 50px;
   background-color: #333;
   text-align: center;
 }
@@ -108,6 +110,6 @@ body {
   .time #teks,
   .time2 #teks2,
   .time3 #teks3 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
