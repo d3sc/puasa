@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    -->
+    <meta charset="UTF-8" />
+    <!-- Specifies the name of the web application that page is represents. -->
+    <meta name="application-name" content="Waktu-Puasa" />
+    <!-- Set up website to have an application shortcut icon added to a device homescreen and the app launch in full-screen "app-mode" (android) -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Set color for status bar and address bar in meta tag (android) -->
+    <meta name="theme-color" content="#050505" />
+    <!-- Set up website to have an application shortcut icon added to a device homescreen and the app launch in full-screen "app-mode" (IOS) -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Set color for status bar and address bar in meta tag (IOS) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#050505" />
+    <!-- Set the author of the page -->
+    <meta name="author" content="Descx" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="og:type" content="Waktu-Puasa" />
+    <meta name="og:title" content="Descx - Waktu-Puasa" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:site_name" content="Waktu-Puasa" />
+    <!-- Define name of overall website content -->
+    <meta name="og:url" content="https://descx-profile/" />
     <title>imsak</title>
+    <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- My Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400&family=Montserrat:wght@500&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,600&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700&family=Raleway:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
+      <h1>Waktu Puasa</h1>
       <div class="lebaran">
         <div class="text">
           <p>Waktu Menjelang Lebaran</p>
         </div>
         <div class="time">
-          <!-- <span id="hours">00</span>
-              <span>:</span>
-              <span id="minutes">00</span>
-              <span>:</span>
-              <span id="seconds">00</span>
-               AM -->
-          <!-- <span id="session">AM</span> -->
           <h1 id="teks">Loading...</h1>
         </div>
       </div>
@@ -30,29 +51,15 @@
           <p>Waktu Menjelang imsak</p>
         </div>
         <div class="time2">
-          <!-- <span id="hours">00</span>
-              <span>:</span>
-              <span id="minutes">00</span>
-              <span>:</span>
-              <span id="seconds">00</span>
-               AM -->
-          <!-- <span id="session">AM</span> -->
           <h1 id="teks2">Loading...</h1>
         </div>
       </div>
 
       <div class="buka">
         <div class="text3">
-          <p>Waktu Menjelang imsak</p>
+          <p>Waktu Menjelang Berbuka</p>
         </div>
         <div class="time3">
-          <!-- <span id="hours">00</span>
-              <span>:</span>
-              <span id="minutes">00</span>
-              <span>:</span>
-              <span id="seconds">00</span>
-               AM -->
-          <!-- <span id="session">AM</span> -->
           <h1 id="teks3">Loading...</h1>
         </div>
       </div>
@@ -99,7 +106,7 @@
 
         const h1 = document.getElementById("teks2");
 
-        h1.innerHTML = `${jam} jam ${menit} menit ${detik} detik`;
+        h1.innerHTML = `${jam} : ${menit} : ${detik}`;
         if (selisih < 0) {
           clearInterval(hitungMundurImsak);
           h1.innerHTML = "Waktu Lebaran!";
@@ -121,7 +128,7 @@
 
         const h1 = document.getElementById("teks3");
 
-        h1.innerHTML = `${jam} jam ${menit} menit ${detik} detik`;
+        h1.innerHTML = `${jam} : ${menit} : ${detik} `;
         if (selisih < 0) {
           clearInterval(hitungMundurImsak);
           h1.innerHTML = "waktu Berbuka";

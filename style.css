@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins";
 }
 
 body {
@@ -15,14 +16,18 @@ body {
   /* background-color: white; */
 }
 
+.container h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 500;
+}
 /* Lebaran */
 
 .lebaran {
   margin: 50px auto;
   font-size: 1.5em;
   background-color: #333;
-  width: 50%;
-  height: 100%;
+  width: 80%;
   padding: 100px;
   /* position: absolute; */
   /* top: 50%; */
@@ -52,8 +57,7 @@ body {
 .container .imsak {
   font-size: 1.5em;
   margin: 50px auto;
-  width: 50%;
-  height: 100%;
+  width: 80%;
   padding: 100px;
   background-color: #333;
 }
@@ -75,21 +79,35 @@ body {
 .container .buka {
   font-size: 1.5em;
   margin: 50px auto;
-  width: 50%;
-  height: 100%;
+  width: 80%;
   padding: 100px;
   background-color: #333;
+  text-align: center;
 }
 
 .container .text3 {
-  text-align: center;
   margin-bottom: 50px;
 }
 
 .container .time3 {
+  font-size: 1em;
   width: 100%;
   height: 80%;
   display: flex;
   text-align: center;
   justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .text1,
+  .text2,
+  .text3 {
+    font-size: 0.9em;
+  }
+
+  .time #teks,
+  .time2 #teks2,
+  .time3 #teks3 {
+    font-size: 1.2em;
+  }
 }
